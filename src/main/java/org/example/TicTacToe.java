@@ -16,10 +16,10 @@ public class TicTacToe {
             }
             if (board.get(i) == "empty board piece") {
                 System.out.print(numberOfBoardPiece.get(i));
-                System.out.print("[]");
+                System.out.print("[ ] ");
             } else {
                 System.out.print(numberOfBoardPiece.get(i));
-                System.out.print("[" + board.get(i) + "]");
+                System.out.print("[" + board.get(i) + "] ");
             }
         }
 
@@ -38,7 +38,7 @@ public class TicTacToe {
         System.out.println("wybierz gdzie chcesz postawić krzyżyk");
         int boardPice = scanner.nextInt();
         boardPice--;
-        if (board.get(boardPice) == "o") {
+        while (board.get(boardPice) == "o" || board.get(boardPice) == "x") {
             System.out.println("Nie możesz postawić w tym miejscu");
             System.out.println("wybierz gdzie chcesz postawić krzyżyk");
             boardPice = scanner.nextInt();
@@ -50,7 +50,7 @@ public class TicTacToe {
     public int aiPlayer() {
         int aiAnswear = (int) (Math.random() * 9);
 
-        if (board.get(aiAnswear) == "empty board piece") {
+        while (board.get(aiAnswear) == "o" || board.get(aiAnswear) == "x") {
             aiAnswear = (int) (Math.random() * 9);
             System.out.println("Ruch ai");
             board.set(aiAnswear, "o");
