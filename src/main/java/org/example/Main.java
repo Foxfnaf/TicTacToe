@@ -6,8 +6,7 @@ public class Main {
 
         ticTacToe.addBoardToList();
         ticTacToe.displayGameBoard();
-        ticTacToe.win();
-        while (true){
+        while (ticTacToe.win == false){
             ticTacToe.addCross();
             ticTacToe.aiPlayer();
         }
