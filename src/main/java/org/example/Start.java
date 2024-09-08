@@ -1,6 +1,6 @@
 package org.example;
 
-public class Main {
+public class Start {
     public static void main(String[] args) {
         TicTacToe ticTacToe = new TicTacToe();
 

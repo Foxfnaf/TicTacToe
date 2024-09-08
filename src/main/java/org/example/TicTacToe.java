@@ -43,25 +43,29 @@ public class TicTacToe {
             System.out.println("Nie możesz postawić w tym miejscu");
             System.out.println("wybierz gdzie chcesz postawić krzyżyk");
             boardPice = scanner.nextInt();
+            boardPice --;
         }
         board.set(boardPice, "x");
         win = win();
         displayGameBoard();
     }
 
-    public int aiPlayer() {
-        int aiAnswear = (int) (Math.random() * 9);
+    public void aiPlayer() {
+        int aiAnswear;
+        boolean isFieldEmpty = true;
 
-        while (board.get(aiAnswear) == "o" || board.get(aiAnswear) == "x") {
+        while (isFieldEmpty) {
             aiAnswear = (int) (Math.random() * 9);
+            if (board.get(aiAnswear).equals("o") || board.get(aiAnswear).equals("x")) {
+                continue;
+            }
+            isFieldEmpty = false;
             System.out.println("Ruch ai");
             board.set(aiAnswear, "o");
+
         }
-        System.out.println("Ruch ai");
-        board.set(aiAnswear, "o");
         win = win();
         displayGameBoard();
-        return aiAnswear;
     }
 
     public boolean win() {
@@ -143,6 +147,17 @@ public class TicTacToe {
         if (board.get(2).equals("o") && board.get(4).equals("o") && board.get(6).equals("o")) {
             System.out.println("Wygrał bot");
             return true;
+        }
+
+        int count = 0;
+        for (int i = 0; i < board.size(); i++) {
+            if (board.get(i) == "x" || board.get(i) == "o"){
+                count++;
+                if (count == 9){
+                    System.out.println("Pat");
+                    return true;
+                }
+            }
         }
 
         return false;
