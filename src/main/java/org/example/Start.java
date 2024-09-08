@@ -6,9 +6,10 @@ public class Start {
 
         ticTacToe.addBoardToList();
         ticTacToe.displayGameBoard();
-        while (ticTacToe.win == false){
+        while (!ticTacToe.win) {
             ticTacToe.addCross();
             ticTacToe.aiPlayer();
+            ticTacToe.displayGameBoard();
         }
     }
 }

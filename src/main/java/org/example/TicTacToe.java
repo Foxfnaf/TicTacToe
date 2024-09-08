@@ -43,11 +43,10 @@ public class TicTacToe {
             System.out.println("Nie możesz postawić w tym miejscu");
             System.out.println("wybierz gdzie chcesz postawić krzyżyk");
             boardPice = scanner.nextInt();
-            boardPice --;
+            boardPice--;
         }
         board.set(boardPice, "x");
         win = win();
-        displayGameBoard();
     }
 
     public void aiPlayer() {
@@ -65,7 +64,6 @@ public class TicTacToe {
 
         }
         win = win();
-        displayGameBoard();
     }
 
     public boolean win() {
@@ -151,9 +149,9 @@ public class TicTacToe {
 
         int count = 0;
         for (int i = 0; i < board.size(); i++) {
-            if (board.get(i) == "x" || board.get(i) == "o"){
+            if (board.get(i) == "x" || board.get(i) == "o") {
                 count++;
-                if (count == 9){
+                if (count == 9) {
                     System.out.println("Pat");
                     return true;
                 }
