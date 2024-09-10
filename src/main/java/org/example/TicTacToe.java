@@ -8,7 +8,7 @@ public class TicTacToe {
     ArrayList<String> board = new ArrayList<String>();
     Scanner scanner = new Scanner(System.in);
     List<Integer> numberOfBoardPiece = new ArrayList<>();
-    boolean win = false;
+    boolean gameStatus = false;
 
     public void displayGameBoard() {
         for (int i = 0; i < board.size(); i++) {
@@ -46,7 +46,7 @@ public class TicTacToe {
             boardPice--;
         }
         board.set(boardPice, "x");
-        win = win();
+        gameStatus = checkGameStatus();
     }
 
     public void aiPlayer() {
@@ -63,10 +63,10 @@ public class TicTacToe {
             board.set(aiAnswear, "o");
 
         }
-        win = win();
+        gameStatus = checkGameStatus();
     }
 
-    public boolean win() {
+    public boolean checkGameStatus() {
         int count = 0;
         for (int i = 0; i < board.size(); i++) {
             if (board.get(i).equals("x")) {
@@ -105,7 +105,7 @@ public class TicTacToe {
             if (board.get(i).equals("o")) {
                 count++;
                 if (count == 3){
-                    System.out.println("Wygrał bot");
+                    System.out.println("Wygrało ai");
                     return true;
                 }
             }
@@ -116,7 +116,7 @@ public class TicTacToe {
             if (board.get(i).equals("o")) {
                 count++;
                 if (count == 3){
-                    System.out.println("Wygrał bot");
+                    System.out.println("Wygrało ai");
                     return true;
                 }
             }
@@ -127,7 +127,7 @@ public class TicTacToe {
             if (board.get(i).equals("o")) {
                 count++;
                 if (count == 3){
-                    System.out.println("Wygrał bot");
+                    System.out.println("Wygrało ai");
                     return true;
                 }
             }
