@@ -71,7 +71,7 @@ public class TicTacToe {
         for (int i = 0; i < board.size(); i++) {
             if (board.get(i).equals("x")) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     System.out.println("Wygrałeś");
                     return true;
                 }
@@ -82,7 +82,7 @@ public class TicTacToe {
         for (int i = 0; i < board.size(); i += 3) {
             if (board.get(i).equals("x")) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     System.out.println("Wygrałeś");
                     return true;
                 }
@@ -93,7 +93,7 @@ public class TicTacToe {
         for (int i = 0; i < board.size(); i += 4) {
             if (board.get(i).equals("x")) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     System.out.println("Wygrałeś");
                     return true;
                 }
@@ -104,7 +104,7 @@ public class TicTacToe {
         for (int i = 0; i < board.size(); i++) {
             if (board.get(i).equals("o")) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     System.out.println("Wygrało ai");
                     return true;
                 }
@@ -115,7 +115,7 @@ public class TicTacToe {
         for (int i = 0; i < board.size(); i += 3) {
             if (board.get(i).equals("o")) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     System.out.println("Wygrało ai");
                     return true;
                 }
@@ -126,7 +126,7 @@ public class TicTacToe {
         for (int i = 0; i < board.size(); i += 4) {
             if (board.get(i).equals("o")) {
                 count++;
-                if (count == 3){
+                if (count == 3) {
                     System.out.println("Wygrało ai");
                     return true;
                 }
