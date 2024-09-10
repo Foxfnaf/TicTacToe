@@ -69,6 +69,9 @@ public class TicTacToe {
     public boolean checkGameStatus() {
         int count = 0;
         for (int i = 0; i < board.size(); i++) {
+            if (i % 3 == 0) {
+                count = 0;
+            }
             if (board.get(i).equals("x")) {
                 count++;
                 if (count == 3) {
@@ -80,6 +83,9 @@ public class TicTacToe {
 
         count = 0;
         for (int i = 0; i < board.size(); i += 3) {
+            if (i % 3 == 0) {
+                count = 0;
+            }
             if (board.get(i).equals("x")) {
                 count++;
                 if (count == 3) {
@@ -91,6 +97,9 @@ public class TicTacToe {
 
         count = 0;
         for (int i = 0; i < board.size(); i += 4) {
+            if (i % 3 == 0) {
+                count = 0;
+            }
             if (board.get(i).equals("x")) {
                 count++;
                 if (count == 3) {
@@ -102,6 +111,9 @@ public class TicTacToe {
 
         count = 0;
         for (int i = 0; i < board.size(); i++) {
+            if (i % 3 == 0) {
+                count = 0;
+            }
             if (board.get(i).equals("o")) {
                 count++;
                 if (count == 3) {
@@ -113,6 +125,9 @@ public class TicTacToe {
 
         count = 0;
         for (int i = 0; i < board.size(); i += 3) {
+            if (i % 3 == 0) {
+                count = 0;
+            }
             if (board.get(i).equals("o")) {
                 count++;
                 if (count == 3) {
@@ -124,6 +139,9 @@ public class TicTacToe {
 
         count = 0;
         for (int i = 0; i < board.size(); i += 4) {
+            if (i % 3 == 0) {
+                count = 0;
+            }
             if (board.get(i).equals("o")) {
                 count++;
                 if (count == 3) {
