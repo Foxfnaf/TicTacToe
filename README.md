@@ -1,5 +1,5 @@
 
 # TicTacToe
 
-> Game with terminal gui.   
-> Designed to enhance Java skills
+> A game with a console GUI.
+> Created to develop Java programming skills.
