@@ -68,84 +68,72 @@ public class TicTacToe {
 
     public boolean checkGameStatus() {
         int count = 0;
-        for (int i = 0; i < board.size(); i++) {
-            if (i % 3 == 0) {
-                count = 0;
-            }
-            if (board.get(i).equals("x")) {
-                count++;
-                if (count == 3) {
-                    System.out.println("Wygrałeś");
-                    return true;
-                }
-            }
+        if (board.get(0).equals("x") && board.get(1).equals("x") && board.get(2).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(3).equals("x") && board.get(4).equals("x") && board.get(5).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(6).equals("x") && board.get(7).equals("x") && board.get(8).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(0).equals("x") && board.get(3).equals("x") && board.get(6).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(1).equals("x") && board.get(4).equals("x") && board.get(7).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(2).equals("x") && board.get(5).equals("x") && board.get(8).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(0).equals("x") && board.get(4).equals("x") && board.get(8).equals("x")) {
+            System.out.println("Wygrałeś");
+            return true;
+        }
+
+        if (board.get(2).equals("x") && board.get(4).equals("x") && board.get(6).equals("x")) {
+            System.out.println("Wygrał");
+            return true;
+        }
+
+        if (board.get(0).equals("o") && board.get(1).equals("o") && board.get(2).equals("o")) {
+            System.out.println("Wygrał bot");
+            return true;
+        }
+
+        if (board.get(3).equals("o") && board.get(4).equals("o") && board.get(5).equals("o")) {
+            System.out.println("Wygrał bot");
+            return true;
+        }
+
+        if (board.get(6).equals("o") && board.get(7).equals("o") && board.get(8).equals("o")) {
+            System.out.println("Wygrał bot");
+            return true;
+        }
+
+        if (board.get(0).equals("o") && board.get(3).equals("o") && board.get(6).equals("o")) {
+            System.out.println("Wygrał bot");
+            return true;
         }
 
         count = 0;
-        for (int i = 0; i < board.size(); i += 3) {
-            if (i % 3 == 0) {
-                count = 0;
-            }
-            if (board.get(i).equals("x")) {
+        for (int i = 0; i < board.size(); i ++) {
+            if (board.get(i).equals("o") || board.get(i).equals("x")) {
                 count++;
-                if (count == 3) {
-                    System.out.println("Wygrałeś");
-                    return true;
-                }
-            }
-        }
-
-        count = 0;
-        for (int i = 0; i < board.size(); i += 4) {
-            if (i % 3 == 0) {
-                count = 0;
-            }
-            if (board.get(i).equals("x")) {
-                count++;
-                if (count == 3) {
-                    System.out.println("Wygrałeś");
-                    return true;
-                }
-            }
-        }
-
-        count = 0;
-        for (int i = 0; i < board.size(); i++) {
-            if (i % 3 == 0) {
-                count = 0;
-            }
-            if (board.get(i).equals("o")) {
-                count++;
-                if (count == 3) {
-                    System.out.println("Wygrało ai");
-                    return true;
-                }
-            }
-        }
-
-        count = 0;
-        for (int i = 0; i < board.size(); i += 3) {
-            if (i % 3 == 0) {
-                count = 0;
-            }
-            if (board.get(i).equals("o")) {
-                count++;
-                if (count == 3) {
-                    System.out.println("Wygrało ai");
-                    return true;
-                }
-            }
-        }
-
-        count = 0;
-        for (int i = 0; i < board.size(); i += 4) {
-            if (i % 3 == 0) {
-                count = 0;
-            }
-            if (board.get(i).equals("o")) {
-                count++;
-                if (count == 3) {
-                    System.out.println("Wygrało ai");
+                if (count == 9) {
+                    System.out.println("pat");
                     return true;
                 }
             }
