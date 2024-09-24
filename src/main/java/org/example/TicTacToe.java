@@ -128,17 +128,6 @@ public class TicTacToe {
             return true;
         }
 
-        count = 0;
-        for (int i = 0; i < board.size(); i ++) {
-            if (board.get(i).equals("o") || board.get(i).equals("x")) {
-                count++;
-                if (count == 9) {
-                    System.out.println("pat");
-                    return true;
-                }
-            }
-        }
-
         return false;
     }
 }
