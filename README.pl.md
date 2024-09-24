@@ -1,9 +1,6 @@
 
 # Kółko i Krzyżyk 
 
-> Gra z gui konsolowym.  
-> Stworzona by doskonalić umiejętności w Java.
-
 Tic Tac Toe, znana w Polsce jako "kółko i krzyżyk", to prosta gra logiczna dla dwóch osób. Gracze na przemian umieszczają swoje symbole – jeden gracz wybiera **X**, a drugi **O** – na planszy o rozmiarze 3x3. Celem gry jest ułożenie trzech swoich symboli w jednej linii: poziomo, pionowo lub ukośnie.
 
 **Zasady:**
