@@ -9,6 +9,7 @@ public class TicTacToe {
     Scanner scanner = new Scanner(System.in);
     List<Integer> numberOfBoardPiece = new ArrayList<>();
     boolean gameStatus = false;
+    int aiAnswear;
 
     public void displayGameBoard() {
         for (int i = 0; i < board.size(); i++) {
@@ -50,13 +51,12 @@ public class TicTacToe {
     }
 
     public void aiPlayer() {
-        int aiAnswear;
         boolean isFieldEmpty = true;
 
         while (isFieldEmpty) {
             aiAnswear = (int) (Math.random() * 9);
-            if (board.get(aiAnswear).equals("o") || board.get(aiAnswear).equals("x")) {
-                continue;
+            while (isFieldOccupated(aiAnswear)) {
+                aiAnswear = (int) (Math.random() * 9);
             }
             isFieldEmpty = false;
             System.out.println("Ruch ai");
@@ -64,6 +64,9 @@ public class TicTacToe {
 
         }
         gameStatus = checkGameStatus();
+    }
+    private boolean isFieldOccupated(int fieldNumber) {
+        return ((board.get(aiAnswear).equals("o") || board.get(aiAnswear).equals("x")));
     }
 
     public boolean checkGameStatus() {
